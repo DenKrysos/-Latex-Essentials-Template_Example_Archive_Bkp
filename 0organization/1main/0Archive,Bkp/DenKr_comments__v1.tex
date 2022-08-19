@@ -1,0 +1,124 @@
+% Fill in in main, preferably at End of Preamble but before \begin{document}
+%    and remove here
+%
+%==================================================================================
+% ----  Some Stuff to help during working state
+%----------------------------------------------------------------------------------
+% Enables you this infamous comments that helps gratuitously while concurrent working / reviewing among several Co-Authors.
+%!!! !!!  Have a look into the File to adjust it to your project.  !!! !!!
+\input{"\DenKrSupplyRootDir/DenKr_comments".tex}%
+% - - After Finishing the work, just: - - - - - - - - - - - - - - - - - - - - - - -
+% Make this active to disable every comment-macro used:
+\renewcommand{\disablewr}[1]{}%
+%----------------------------------------------------------------------------------
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%==================================================================================
+%
+%
+%#######################################################
+% Keep the rest below here, inside this file
+%
+%
+%==================================================================================
+% ----  Some Stuff to help during working state
+%----------------------------------------------------------------------------------
+% Disable-Wrapper. Helps to disable everything with just one Step. Remember to use it ;oP
+				\newcommand{\disablewr}[1]{#1}%
+				\newcommand{\newcommanddisw}[3]{\newcommand{#1}[1]{\disablewr{{\color{#2}#3}}}}%
+%  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+% !!! !!!  . . .  !!! !!!  . . .  !!! !!!
+% - - After Finishing the work, just: - - - - - - - - - - - - - - - - - - - - - - -
+% Make this active to disable every comment-macro used (the ones defined below):
+%\renewcommand{\disablewr}[1]{}%
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+%
+%
+%
+%
+%= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\definecolor{todocol}{named}{red}
+\newcommanddisw{\todo}{todocol}{ToDo: #1}%
+%\renewcommand{\todo}[1]{}%% Disable comments [selectively this]
+%
+\definecolor{notecol}{named}{gray}
+\newcommanddisw{\notice}{notecol}{Notice: #1}%
+%\renewcommand{\notice}[1]{}%% Disable comments [selectively this]
+%
+\definecolor{denkrComCol1}{named}{purple}%
+\newcommanddisw{\denkrcom}{denkrComCol1}{{\#}DenKr: #1}%
+\newcommanddisw{\denkrhigh}{denkrComCol1}{#1}%
+% \renewcommand{\denkrcom}[1]{}%% Disable comments [selectively this]
+% \renewcommand{\denkrhigh}[1]{#1}%% Disable highlighting of text [selectively this]
+% \renewcommand{\denkrhigh}[1]{}%% Completely disable this kind of text [selectively this]
+\newcommand{\dkc}[1]{\denkrcom{#1}}
+%
+\definecolor{denkrComCol2}{named}{blue}%
+\newcommanddisw{\chficom}{denkrComCol2}{{\#}ChFi: #1}%
+\newcommanddisw{\chfihigh}{denkrComCol2}{#1}%
+% \renewcommand{\chficom}[1]{}%% Disable comments [selectively this]
+% \renewcommand{\chfihigh}[1]{#1}%% Disable highlighting of text [selectively this]
+% \renewcommand{\chfihigh}[1]{}%% Completely disable this kind of text [selectively this]
+%
+\definecolor{denkrComCol3}{named}{ForestGreen}%
+\newcommanddisw{\mabecom}{denkrComCol3}{{\#}MaBe: #1}%
+\newcommanddisw{\mabehigh}{denkrComCol3}{#1}%
+% \renewcommand{\mabecom}[1]{}%% Disable comments [selectively this]
+% \renewcommand{\mabehigh}[1]{#1}%% Disable highlighting of text [selectively this]
+% \renewcommand{\mabehigh}[1]{}%% Completely disable this kind of text [selectively this]
+%
+\definecolor{denkrComCol4}{named}{orange}%
+\newcommanddisw{\jazecom}{denkrComCol4}{{\#}JaZe: #1}%
+\newcommanddisw{\jazehigh}{denkrComCol4}{#1}%
+% \renewcommand{\jazecom}[1]{}%% Disable comments [selectively this]
+% \renewcommand{\jazehigh}[1]{#1}%% Disable highlighting of text [selectively this]
+% \renewcommand{\jazehigh}[1]{}%% Completely disable this kind of text [selectively this]
+%
+\definecolor{denkrComCol5}{named}{brown}%
+\newcommanddisw{\bevecom}{denkrComCol5}{{\#}BeVe: #1}%
+\newcommanddisw{\bevehigh}{denkrComCol5}{#1}%
+% \renewcommand{\bevecom}[1]{}%% Disable comments [selectively this]
+% \renewcommand{\bevehigh}[1]{#1}%% Disable highlighting of text [selectively this]
+% \renewcommand{\bevehigh}[1]{}%% Completely disable this kind of text [selectively this]
+%
+\definecolor{denkrComCol6}{named}{Emerald}%
+\newcommanddisw{\migucom}{denkrComCol6}{{\#}MiGu: #1}%
+\newcommanddisw{\miguhigh}{denkrComCol6}{#1}%
+% \renewcommand{\migucom}[1]{}%% Disable comments [selectively this]
+% \renewcommand{\miguhigh}[1]{#1}%% Disable highlighting of text [selectively this]
+% \renewcommand{\miguhigh}[1]{}%% Completely disable this kind of text [selectively this]
+%
+\definecolor{denkrComCol7}{named}{Thistle}%
+\newcommanddisw{\hedicom}{denkrComCol7}{{\#}Hedi: #1}%
+\newcommanddisw{\hedihigh}{denkrComCol7}{#1}%
+% \renewcommand{\hedicom}[1]{}%% Disable comments [selectively this]
+% \renewcommand{\hedihigh}[1]{#1}%% Disable highlighting of text [selectively this]
+% \renewcommand{\hedihigh}[1]{}%% Completely disable this kind of text [selectively this]
+%
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+%
+%
+%
+%
+%= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%
+\newcommand{\TempDisplayPreparation}{\disablewr{%
+	{%
+	\section{Draft-State: Comment Color Code}{\noindent\raggedright%
+	\todo{Comments: ToDos: \mbox{$\Rightarrow$ \textbackslash todo\{ \}}}\nl%
+    \notice{Comment: A general Notice: \mbox{$\Rightarrow$ \textbackslash notice\{ \}}}\nl%
+	\denkrcom{Comments: Dennis Krummacker: \mbox{$\Rightarrow$ \textbackslash denkrcom\{ \}}}\nl%
+	\chficom{Comments: Christoph Fischer: \mbox{$\Rightarrow$ \textbackslash chficom\{ \}}}\nl%
+	\mabecom{Comments: Maximilian Berndt: \mbox{$\Rightarrow$ \textbackslash mabecom\{ \}}}\nl%
+	\jazecom{Comments: Janis Zemitis: \mbox{$\Rightarrow$ \textbackslash jazecom\{ \}}}\nl%
+	\bevecom{Comments: Benedikt Veith: \mbox{$\Rightarrow$ \textbackslash bevecom\{ \}}}\nl%
+	\migucom{Comments: Michael Gundall: \mbox{$\Rightarrow$ \textbackslash migucom\{ \}}}\nl%
+	\hedicom{Comments: Mohamed Romdhane: \mbox{$\Rightarrow$ \textbackslash hedicom\{ \}}}\nl%
+    }}%
+}}%
+%----------------------------------------------------------------------------------
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%==================================================================================

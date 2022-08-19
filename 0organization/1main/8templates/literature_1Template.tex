@@ -1,0 +1,322 @@
+
+@COMMENT{In many cases the "Booktitle", i.e. the Title of the conference's proceedings is just equal to the "Eventtitle". Hence, one might then simply want to avoid the Eventtitle, because the Booktitle suffices.}
+@COMMENT{Strong Suggestion: Below where the Fields are explained. Every field that has a leading Asterisk should always be set (As long as suiting. Of course no Journal for conference-paper or no Issuetitle when its just normal within a journal without special-issue. Or refering to the upper Comment: Only one of both as long as identical)}
+
+
+
+
+@COMMENT{===========================================================}
+@COMMENT{###########################################################}
+@COMMENT{###    Empty Boilerplate    ###############################}
+@COMMENT{###########################################################}
+@COMMENT{===========================================================}
+
+
+@COMMENT{-----------------------------------------------------------}
+@COMMENT{===  InProceedings  (Research Paper on Conference)  =======}
+@COMMENT{-----------------------------------------------------------}
+
+@INPROCEEDINGS{Key_Template_InProceedings_Empty,
+    KEYWORDS={DenKr_literature,primary_literature},
+    TITLE={\begingroup
+        Title\endgroup},
+    AUTHOR={Krummacker, Dennis and Schotten, Hans Dieter},
+    EDITOR={},
+    YEAR={2022},
+    MONTH={},
+    BOOKTITLE={},
+    BOOKTITLEGERMAN={},
+    BOOKSUBTITLE={},
+    BOOKTITLEADDON={},
+    VOLUME={},
+    NUMBER={},
+    PAGES={},
+    EVENTTITLE={},
+    VENUE={},
+    EVENTDATE={},
+    INSTITUTION={},
+    ORGANIZATION={},
+    PUBLISHER={},
+    LOCATION={},
+    EPRINT={},
+    EPRINTTYPE={},
+    EPRINTCLASS={},
+    DOI={},
+    ISSN={},
+    ISBN={},
+    LANGUAGE={English},
+    ABSTRACT={\begingroup
+        Abstract\endgroup}
+}
+
+
+
+@COMMENT{-----------------------------------------------------------}
+@COMMENT{===  Article  (within Journal, Magazine or Newspaper)  ====}
+@COMMENT{-----------------------------------------------------------}
+
+@ARTICLE{Key_Template_Article_Empty,
+    KEYWORDS={DenKr_literature,primary_literature},
+    TITLE={\begingroup
+        Title\endgroup},
+    AUTHOR={Krummacker, Dennis and Schotten, Hans Dieter},
+    EDITOR={},
+    YEAR={2022},
+    MONTH={},
+    JOURNALTITLE={},
+    ISSUETITLE={},
+    VOLUME={},
+    NUMBER={},
+    PAGES={},
+    INSTITUTION={},
+    ORGANIZATION={},
+    PUBLISHER={},
+    LOCATION={},
+    EPRINT={},
+    EPRINTTYPE={},
+    EPRINTCLASS={},
+    DOI={},
+    ISSN={},
+    ISBN={},
+    LANGUAGE={English},
+    ABSTRACT={\begingroup
+        Abstract\endgroup}
+}
+
+
+
+
+
+
+
+
+
+
+@COMMENT{===========================================================}
+@COMMENT{###########################################################}
+@COMMENT{###    Explanation/Distinction for Fields    ##############}
+@COMMENT{###########################################################}
+@COMMENT{===========================================================}
+
+
+@INPROCEEDINGS{Key_VariousFieldsExplained_InProceedings_Article,
+    KEYWORDS={DenKr_literature,primary_literature},
+    TITLE={\begingroup
+        *Always format the Title exactly this way. Use these two pre- and succeeding Macros. No linebreak or any kind of whitespace before the trailing endgroup-macro. Trust me, this a trick, I developed to assure proper formatting in the resulting document and avoid issues\endgroup},
+    AUTHOR={*Authors. Lastname, Firstname. Authors concatenated by the Word "and" in-between},
+    EDITOR={Editor of the final publication. Mostly only relevant for Journals, Magazines, Newspapers},
+    EDITORA={secondary editor(s), editora/b/ctype for roles},
+    EDITORB={},
+    EDITORC={},
+    YEAR={*2000},
+    MONTH={},
+    BOOKTITLE={*Title of Book, in case of an article in a Book. Also used for the Proceedings-Title for conferences},
+    BOOKTITLEGERMAN={},
+    BOOKSUBTITLE={},
+    BOOKTITLEADDON={},
+    JOURNALTITLE={*Or just JOURNAL. In case of Journal, Magazine article},
+    ISSUETITLE={*Title of the special Issue in case of Journal},
+    VOLUME={volume of journal or multi-volume book},
+    NUMBER={numbered issue of journal or book in series},
+    PAGES={The pages inside the collection (like proceedings, journal, book). I.e. NOT like 1--8, but like 21--29. Or just the amount of pages, like 8},
+    EVENTTITLE={*Title of the Conference. Proceedings-Title is usually equal to this. Then, the Eventtitle may be omitted and just Booktitle is used.},
+    VENUE={*Place (City, Country), where the conference took place},
+    EVENTDATE={*Date of the conference. Single day or timespan. Format: Days as "ISO 8601". When timespan: StartDay/EndDay. E.g.: 2020-01-01/2020-12-31},
+    INSTITUTION={University, Research Institute or similar. E.g.: University of Kaiserslautern, DFKI},
+    ORGANIZATION={manual/website publisher or event sponsor. E.g.: IEEE, VDI, VDE},
+    PUBLISHER={Publisher(s). E.g.: IEEE Xplore, ACM, MDPI, Springer, Elsevier},
+    LOCATION={or address, where published. NOT the location, where a conference took place},
+    EPRINT={archive-specific electronic identifier. E.g.: https://www.eit.uni-kl.de/wicon/publikationen/konferenzbericht   or   https://doi.org/10.1145/3284557.3284716},
+    EPRINTTYPE={type of identifier, eprintclass for further details},
+    EPRINTCLASS={E.g.: Open-Access},
+    DOI={Digital Object Identifier. E.g.: 10.1109/ICPS51978.2022.9816860},
+    ISSN={},
+    ISBN={},
+    URL={Sometimes handy for Online-Resources, classified as MISC},
+    LANGUAGE={*English},
+    NOTE={miscellaneous data printed within entry},
+    ADDENDUM={miscellaneous data printed at end of entry},
+    ABSTRACT={\begingroup
+        *Same formatting as for the Title.\endgroup}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@COMMENT{===========================================================}
+@COMMENT{###########################################################}
+@COMMENT{###    Examples    ########################################}
+@COMMENT{###########################################################}
+@COMMENT{===========================================================}
+
+
+@COMMENT{-----------------------------------------------------------}
+@COMMENT{====  Examples - InProceedings  ===========================}
+@COMMENT{-----------------------------------------------------------}
+
+@INPROCEEDINGS{Key_Template_InProceedings_Example_1,
+    KEYWORDS={DenKr_literature,primary_literature},
+    TITLE={\begingroup
+        Title\endgroup},
+    AUTHOR={Krummacker, Dennis and Schotten, Hans Dieter},
+    EDITOR={},
+    YEAR={2000},
+    MONTH={},
+    BOOKTITLE={2020 Workshop on Next Generation Networks and Applications (NGNA 2020)},
+    BOOKTITLEGERMAN={},
+    BOOKSUBTITLE={},
+    BOOKTITLEADDON={},
+    VOLUME={},
+    NUMBER={},
+    PAGES={},
+    EVENTTITLE={},
+    VENUE={Kaiserslautern, Germany},
+    EVENTDATE={2020-12-14/2020-12-18},
+    INSTITUTION={Technische Universit{\"a}t Kaiserslautern},
+    ORGANIZATION={IEEE},
+    PUBLISHER={},
+    LOCATION={},
+    EPRINT={https://www.eit.uni-kl.de/wicon/publikationen/konferenzbericht},
+    EPRINTTYPE={},
+    EPRINTCLASS={Open-Access},
+    DOI={},
+    ISSN={},
+    ISBN={},
+    LANGUAGE={English},
+    ABSTRACT={\begingroup
+        Abstract\endgroup}
+}
+
+@INPROCEEDINGS{Key_Template_InProceedings_Example_2,
+    KEYWORDS={DenKr_literature,primary_literature},
+    TITLE={\begingroup
+        Title\endgroup},
+    AUTHOR={Krummacker, Dennis and Schotten, Hans Dieter},
+    EDITOR={},
+    YEAR={2021},
+    MONTH={11},
+    BOOKTITLE={Mobile Communication-Technologies and Applications; 25th ITG-Symposium},
+    BOOKTITLEGERMAN={ITG Fachbericht, Mobilkommunikation -- Technologien und Anwendungen; 25. ITG-Fachtagung},
+    BOOKSUBTITLE={},
+    BOOKTITLEADDON={},
+    VOLUME={299},
+    NUMBER={},
+    PAGES={1--12},
+    EVENTTITLE={25. ITG-Fachtagung Mobilkommunikation},
+    VENUE={Osnabr{\"u}ck},
+    EVENTDATE={2021-11-03/2021-11-04},
+    ORGANIZATION={VDE},
+    PUBLISHER={IEEE Xplore, VDE},
+    LOCATION={},
+    EPRINT={},
+    EPRINTTYPE={},
+    EPRINTCLASS={},
+    DOI={10.1109/ICPS51978.2022.9816860},
+    ISSN={},
+    ISBN={978-3-8007-3937-0},
+    LANGUAGE={English},
+    ABSTRACT={\begingroup
+        Abstract\endgroup}
+}
+
+@INPROCEEDINGS{Key_Template_InProceedings_Example_3,
+    KEYWORDS={DenKr_literature,primary_literature},
+    TITLE={\begingroup
+        Title\endgroup},
+    AUTHOR={Krummacker, Dennis and Schotten, Hans Dieter},
+    EDITOR={},
+    YEAR={2000},
+    MONTH={},
+    BOOKTITLE={Proceedings of the 2nd International Symposium on Computer Science and Intelligent Control (ISCSIC)},
+    BOOKTITLEGERMAN={},
+    BOOKSUBTITLE={},
+    BOOKTITLEADDON={},
+    VOLUME={},
+    NUMBER={},
+    PAGES={},
+    EVENTTITLE={International Conference on Industrial Automation, Robotics and Control Engineering (IARCE-2018)},
+    VENUE={Stockholm, Sweden},
+    EVENTDATE={2018-09-21/2018-09-23},
+    ORGANIZATION={International Academy of Science and Engineering for Development (IASED)},
+    PUBLISHER={ACM},
+    LOCATION={},
+    EPRINT={https://doi.org/10.1145/3284557.3284716},
+    EPRINTTYPE={},
+    EPRINTCLASS={Open-Access},
+    DOI={},
+    ISSN={},
+    ISBN={},
+    LANGUAGE={English},
+    ABSTRACT={\begingroup
+        Abstract\endgroup}
+}
+
+
+
+@COMMENT{-----------------------------------------------------------}
+@COMMENT{====  Examples - Article  =================================}
+@COMMENT{-----------------------------------------------------------}
+
+@ARTICLE{Key_Template_InProceedings_Empty,
+    KEYWORDS={DenKr_literature,primary_literature},
+    TITLE={\begingroup
+        Title\endgroup},
+    AUTHOR={Krummacker, Dennis and Schotten, Hans Dieter},
+    EDITOR={},
+    YEAR={2000},
+    MONTH={},
+    JOURNAL={IFAC-PapersOnLine},
+    ISSUETITLE={},
+    VOLUME={53},
+    NUMBER={2},
+    PAGES={8243--8248},
+    INSTITUTION={},
+    ORGANIZATION={},
+    PUBLISHER={Elsevier},
+    LOCATION={},
+    EPRINT={https://doi.org/10.1016/j.ifacol.2020.12.1972},
+    EPRINTTYPE={},
+    EPRINTCLASS={Open-Access},
+    DOI={},
+    ISSN={},
+    ISBN={},
+    LANGUAGE={English},
+    ABSTRACT={\begingroup
+        Abstract\endgroup}
+}
+
+@ARTICLE{Key_Template_Article_Empty,
+    KEYWORDS={DenKr_literature,primary_literature},
+    TITLE={\begingroup
+        Title\endgroup},
+    AUTHOR={Krummacker, Dennis and Schotten, Hans Dieter},
+    EDITOR={},
+    YEAR={2000},
+    MONTH={},
+    JOURNAL={Information},
+    ISSUETITLE={},
+    VOLUME={12},
+    NUMBER={1},
+    PAGES={12},
+    INSTITUTION={},
+    ORGANIZATION={},
+    PUBLISHER={Multidisciplinary Digital Publishing Institute (MDPI)},
+    LOCATION={},
+    EPRINT={https://doi.org/10.3390/info12010012},
+    EPRINTTYPE={},
+    EPRINTCLASS={Open-Access},
+    DOI={},
+    ISSN={},
+    ISBN={},
+    LANGUAGE={English},
+    ABSTRACT={\begingroup
+        Abstract\endgroup}
+}

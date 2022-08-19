@@ -1,0 +1,28 @@
+//Input:
+//- topics\_recv[]: All consumed (received) Topics from last received msg
+//- sendr\_perTopic[]: Local memory, indexed per Topics to produce for, delivers corresponding Daemons
+//- recvr\_perTopic[]: Local memory, indexed per Topics to consume from
+
+¢\color{js_function}cfg\_calc¢(topics_recv[], sendr_pT[], recvr_pT[]){
+	for each (tp_curr in topics_recv){
+		sendr_forThis[] = ¢\color{js_function}lookup\_sender\_forTopic¢(sendr_pT,tp_curr);
+		for each (sendr_curr in sendr_forThis){
+			sendTP_ofSender[] = ¢\color{js_function}lookup\_Topics\_ofClient¢(sendr_curr, producing);
+			for each (sendTP_iter in sendTP_ofSender[]){
+				//Yields a matrix. Potentially multiple Topics to produce for and multiple consumer per Topic.
+				recvr_ofTP[sendTP_iter][] = ¢\color{js_function}lookup\_receiver\_forTopic¢(recvr_pt, sendTP_iter);
+			}
+			cfg_msg = ¢\color{js_function}build\_cfg\_msg¢(sendTP_ofSender, recvr_ofTP);
+			¢\color{js_function}send¢(sendr_curr, cfg_msg);
+		}
+	}
+
+¢\color{js_function}build\_cfg\_msg¢(sendTP_ofSender[], recvr_ofTP[][]){
+	//Forms a msg in the form of
+	//\ \ [Sequence of <connection information for all receivers>, without duplicates]
+	//\ \ [Sequence of (for all Topics to produce for):
+	//\ \ \ \ <Topic>
+	//\ \ \ \ [Sequence of <recv-indices>*]
+	//\ \ ]
+}
+//*where one index refers to the section containing all receivers and one index represents one receiver for the preceding Topic

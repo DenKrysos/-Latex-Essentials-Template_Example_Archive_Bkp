@@ -1,0 +1,70 @@
+\begin{table}[!t]%[htbp] %laut IEEE guidelines müssen Tabellen und Bilder oben auf einer Seite erscheinen
+\small
+  \begin{center}
+  \caption{Requirements Mapped to Solutions}
+    \begin{tabular}{|l|c|c|c|c|}
+		\hline
+        \rowcolor{Gray}
+		\begin{tabular}[t]{@{}lr@{}}
+           & \textbf{Solution:} \\
+    \textbf{Requirement:} &
+  \end{tabular} & \textit{S1} & \textit{S2} & \textit{S3} & \textit{S4} \\
+	\hline
+	Timing Precision & \legcheck & \legcheck & \legcheck  & \legbullet\\
+	\hline
+	Flexibility & \legcross & \legcheck & \legcheck & \legbullet\\
+	\hline
+	Real World Interaction & \legcheck & \legcheck & \legcheck & \legcheck\\
+	\hline
+	Trusty Physical Interaction  & \legcheck & \legbullet & \legbullet & \legcross\\
+	\hline
+	Adaptability & \legcheck & \legcheck & \legbullet & \legbullet\\
+	\hline
+    Ease of Use & \legcross & \legbullet & \legcheck & \legbullet\\
+	\hline
+    Simulation/Emulation & Both & Both & Sim & Emu\\
+	\hline
+    Levels of Automation & 1-5 & 1-5 & 2-3 & 3-5\\
+	\hline
+		\end{tabular}%
+		\end{center}
+  \label{tab:req_mapping}%
+	\par%\medskip
+\makeatletter
+	%\raggedleft
+    \footnotesize%
+	\hspace{1.5em}\textbf{Legend:}\hspace{1em}
+	{\normalsize\legcrossstraight\ - }Solution does not meet requirement,\nl
+	\hspace{6.4em}{\normalsize\legbulletstraight\ - }Solution partly meets requirement,\nl
+	\hspace{6.0em}{\normalsize\legcheckstraight\ - }Solution meets requirement.
+\makeatother
+\end{table}%
+%
+%
+%
+%
+% Diagonally divided Box
+\begin{table}[!htpb]
+\small
+  \begin{center}
+  \caption{Connection Matrix for SotA and Solution Candidates}
+\begin{tabular}[]{l||c|c|c|c|}
+%\diaghead{Candidate 4}{x}{y}
+\diagbox[width=6em,height=3.5ex]{x}{y}
+    &Core/NFs&UE&RAN&\gls{ba}\\\hline\hline
+ 5G&REST&REST&REST&REST\\\hline
+ Candidate 1&REST&REST&REST&Pub/Sub\\\hline
+ Candidate 2&Pub/Sub&REST&Pub/Sub&Pub/Sub\\\hline
+ Candidate 3&Pub/Sub&Pub/Sub&Pub/Sub&Pub/Sub\\\hline
+\end{tabular}
+\end{center}
+  \label{tab:}%
+	\par%\medskip
+\makeatletter
+	%\raggedleft
+    \footnotesize%
+    Interaction method between core services / NFs and other infrastructure element.\nl%
+    \textbf{x}: Solution Candidate (Section~\ref{sec:solCand}).
+    \textbf{y}: Element to interact with.
+\makeatother
+\end{table}
