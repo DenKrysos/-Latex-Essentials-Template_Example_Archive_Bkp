@@ -1,0 +1,11 @@
+wch_clients 	wch_sentFrames	wch_sentBytes	ach_clients 	ach_sentFrames	ach_sentBytes	ac_clients 	ac_sentFrames	ac_sentBytes
+1	13	1761	1	4	300	1	36	2700
+2	44	4910	2	4	300	2	0	0
+3	40	4362	3	4	300	3	0	0
+4	36	3838	4	4	300	4	0	0
+5	32	3338	5	4	300	5	0	0
+6	28	2862	6	4	300	6	0	0
+7	24	2410	7	4	300	7	0	0
+8	20	1982	8	4	300	8	0	0
+9	16	1578	9	4	300	9	0	0
+10	13	1341	10	4	300	10	0	0

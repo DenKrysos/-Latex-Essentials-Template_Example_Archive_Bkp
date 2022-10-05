@@ -1,0 +1,53 @@
+
+\begin{figure}[!htpb]%
+	\centering%
+	\begin{tikzpicture}
+		\begin{axis}[
+			width=0.99\columnwidth,
+			height=7cm,
+			grid=major,
+			legend style={at={(1,1)},anchor=north east,xshift=-0.2cm,yshift=-0.2cm},
+			% title={Initialisierung und Entfernung vom AP},
+ 			% xtick={1,2,3},
+			% x tick label style={/pgf/number format/1000 sep=},
+			% scaled x ticks = false,
+			xlabel={Client ID},
+			scaled y ticks={base 10:-3},
+			%scale ticks below exponent={-3},
+            % yticklabel={$\pgfmathprintnumber{\tick}$\%},
+            y tick label style={
+                %/pgf/number format/1000 sep= 
+                /pgf/number format/.cd,
+                %fixed,
+                precision=3,
+                /tikz/.cd
+            },
+			% extra y ticks={54},
+			% extra y tick labels={{456,1},{1022,4}},
+			% extra y tick style={grid=major,
+			% 	tick label style={xshift=-1cm}},
+			ylabel={Bytes sent per Client},
+			%enlarge x limits=0.01,
+			max space between ticks=20,
+			% try min ticks=1
+			]
+			%
+			\addplot table [x=ach_clients,
+							y=ach_sentBytes]
+				{\DenKrGraphicsRootDir/graph_workload.csv};
+			\addlegendentry{Active-Chain}
+			%
+			\addplot table [x=ac_clients,
+							y=ac_sentBytes]
+				{\DenKrGraphicsRootDir/graph_workload.csv};
+			\addlegendentry{Active-Client}
+			%
+			\addplot table [x=wch_clients,
+							y=wch_sentBytes]
+				{\DenKrGraphicsRootDir/graph_workload.csv};
+			\addlegendentry{Waiting-Chain}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Workload Distribution.}
+	\label{fig:measurement_workload}
+\end{figure}%
