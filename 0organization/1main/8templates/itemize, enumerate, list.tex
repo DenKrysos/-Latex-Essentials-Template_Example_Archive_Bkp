@@ -1,3 +1,6 @@
+% On the Error "Command \labelindent already defined": That's a thing only in certain Class-Files (like IEEE) for legacy reasons. You may safely deactivate it with:
+\let\labelindent\relax%
+%
 %
 % \begin{itemize}[label=$\rightarrow$,leftmargin=1.5em,topsep=0ex,itemsep=0ex,parsep=0ex]
 %
@@ -49,6 +52,11 @@ Or alternatively
 %
 %
 %
-%
+% % % % Some Examples
 \setlist[description]{leftmargin=0em,labelindent=1em,style=unboxed}%
 \renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\normalfont\textbf{#1}:}%
+%
+% Indent whole Description-List with Paragraph-Start-Indent
+\setlist[description]{leftmargin=\parindent,labelindent=\parindent}
+% Remove all indendation from Description-List
+\setlist[description]{leftmargin=0pt,labelindent=0pt}

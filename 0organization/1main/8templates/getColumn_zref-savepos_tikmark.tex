@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+
+\usepackage[paper height = 10cm]{geometry}
+
+\usepackage{zref-savepos}
+
+\newcounter{columncheck}
+
+\usepackage{tikz}
+\usetikzlibrary{calc, tikzmark}
+\newcounter{nivel}
+\makeatletter
+\newcommand{\niveis}[1]{%
+  \if@twocolumn%
+    \leftorright{%
+      \def\ancora{east}%
+      \def\margem{west}%
+      \def\deslocamento{+2.25cm}%
+    }{%
+      \def\ancora{west}%
+      \def\margem{east}%
+      \def\deslocamento{-2.25cm}%
+    }%
+  \fi%
+  \stepcounter{nivel}%
+  \tikzmark{exercicio-\thenivel}%
+  \begin{tikzpicture}[overlay, remember picture,
+    every node/.style = {
+      align = center,
+      font=\footnotesize\bfseries\sffamily\color{white},
+      anchor = center,
+    },
+    ]
+    \coordinate (base) at
+      ($(current page.\margem|-{pic cs:exercicio-\thenivel})
+      + (\oddsidemargin+\hoffset\deslocamento, 0)$);
+    \foreach \n[count = \k from 0] in {#1}{
+      \coordinate (item) at ($(base) - (0, 0.6cm * \k)$);
+      \draw[thick, red, <-] ({pic cs:exercicio-\thenivel}) -- (item);
+      \path[fill = black!75] (item) circle (0.25cm);
+      \node at (item) {\n};
+    }
+  \end{tikzpicture}%
+}
+\newcommand{\whichcolumn}{%
+  \stepcounter{columncheck}%
+  \zsaveposx{columncheck-\thecolumncheck}%
+  \ifdim.5\paperwidth > \zposx{columncheck-\thecolumncheck}sp
+    LEFT%
+    \let\leftorright\@firstoftwo
+  \else
+    RIGHT%
+    \let\leftorright\@secondoftwo
+  \fi
+}
+\makeatother
+
+\begin{document}
+
+\foreach \i in {1, ..., 50}{
+  \mbox{}\whichcolumn (\i)\niveis{A, B} Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Um enim ad minim veniam, quis nostrud exercitation ullamco is in the \whichcolumn\ column.\par%
+}
+
+\end{document}
