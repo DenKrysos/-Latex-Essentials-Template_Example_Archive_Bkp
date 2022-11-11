@@ -1,0 +1,10 @@
+//Input:
+//- Some Explanation in Comment
+
+¢\color{js_function}some\_function¢(input_array[], anotherVar){
+	for each (curr in input_array){
+		output[] = ¢\color{js_function}push\_result¢(anotherVar);
+		char[] msg = ¢\color{js_function}build\_msg¢(someInput);
+		¢\color{js_function}send¢(curr, msg);
+	}
+}
