@@ -3,6 +3,27 @@
 %  I very much prefer subcaption.
 %  My preferred way of using it:
 
+
+
+% Using my Macro "\DenKrSubfloat"
+% % % Adjusts accordingly to the included packages
+\begin{figure*}[!htpb]
+    \centering
+    % \hspace*{\fill}
+    \DenKrSubfloat{subfig:hierarchy_entanglement}{Entanglement -- Tight coupling with Origin vs. Decoupled Simulation. (Dashed arrows only varied for better readability)}{
+        \includestandalone[width=0.7\linewidth,mode=\includestandalonedefaultmode]{\tikzFilesPath/hierarchy_entanglement}
+    }
+    \hspace*{\fill}
+    \DenKrSubfloat{subfig:hierarchy_inheritance_functional}{Functional -- Inheritance of properties and methods across relating \protect\gls{digt} variants}{
+        \includestandalone[width=0.25\linewidth,mode=\includestandalonedefaultmode]{\tikzFilesPath/hierarchy_inheritance_functional}
+    }
+    % \hspace*{\fill}
+    \caption{Hierarchy of different \protect\glspl{digt} for inheriting properties, classifying and relation allotment}
+    \label{fig:hierarchy}
+\end{figure*}
+
+
+
 % Subcaption / Subfigure
 % % % When the two figures are in on column, below/above each other
 \begin{figure}%[!htpb]%
