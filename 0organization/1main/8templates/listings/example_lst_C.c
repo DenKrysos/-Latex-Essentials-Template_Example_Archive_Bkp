@@ -1,7 +1,11 @@
-void* ¢\color{eclipse_keyword2}\bfseries some\_function¢(void* args, int argc){
+void* ¢\color{black}\bfseries some\_function¢(void* args, int argc){
 	if(var->entry){
 		char* some_point = NULL;
 		int len = ¢\color{eclipse_keyword2}make\_something¢($some_point);
+		struct timespec tim;
+		tim->tv_nsec=200;
+		struct some_struct struc;
+		struc->member=2;
 		while(current != var->iterator){
 			//Some Comment
 		}
