@@ -1,7 +1,7 @@
-\begin{algorithm}
-    \caption{Euclid’s algorithm}
-    \label{euclid}
-    \begin{algorithmic}[1] % The number tells where the line numbering should start
+\begin{algorithm}[!htbp]%Adding float-specifier brackets, makes it behave as a float, otherwise not
+    \caption{Euclid’s algorithm}%
+    \label{euclid}%
+    \begin{algorithmic}[1]\denkrAlgorithmFont% The number tells where the line numbering should start
         \Procedure{Euclid}{$a,b$} \Comment{The g.c.d. of a and b}
             \State $r\gets a \bmod b$
             \While{$r\not=0$} \Comment{We have the answer if r is 0}
@@ -11,15 +11,15 @@
             \EndWhile\label{euclidendwhile}
             \State \textbf{return} $b$\Comment{The gcd is b}
         \EndProcedure
-    \end{algorithmic}
-\end{algorithm}
+    \end{algorithmic}%
+\end{algorithm}%
 
 
 
 
-\begin{algorithm_breakable}
-  \caption{Euclid’s algorithm}
-  \begin{algorithmic}[1]
+\begin{algorithm_breakable}%
+  \caption{Euclid’s algorithm}%
+  \begin{algorithmic}[1]\denkrAlgorithmFont%
     \Procedure{Euclid}{$a,b$}\Comment{The g.c.d.\ of~$a$ and~$b$}
     \State $r \gets a \bmod b$
     \While{$r \neq 0$}\Comment{We have the answer if~$r$ is~$0$}
@@ -29,5 +29,30 @@
     \EndWhile
     \State \textbf{return} $b$\Comment{The g.c.d.\ is~$b$}
     \EndProcedure
-  \end{algorithmic}
-\end{algorithm_breakable}
+  \end{algorithmic}%
+\end{algorithm_breakable}%
+
+
+
+
+%/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+%				USAGE
+%________________________________________________________________________
+% Algorithms do not really *have to* be "included objects". (Like one would do a \includegraphics{})
+% They can well be directly put into the document's content body, directly within the text.
+% But just to keep things tidy and "standardized" for all float-alike objects, I prefer to:
+%
+% Put an algorithm into a separate .tex file (Just the code of it, everything inside and including \begin / \end{algorithm}
+% Store these in one uniform directory (like set by my boilerplate) and then in the actual text body, simply include it, like any ordinary .tex file:
+%        \input{"\DenKrAlgorithmRootDir/SomeAlgorithm".tex}%
+%
+% If you do not insert it as a float (i.e. omit the float-specifier brackets, or use a _breakable environment), you might want to add some more whitespace surrounding it.
+%   (I am not saying, you *should*, just stating, that it might look better in some cases, especially for big documents, like Books, where one could easier space the additional vertical space.)
+% Then you can safely do something like:
+%        \vspace{0.5\baselineskip}
+%        \input{"\DenKrAlgorithmRootDir/SomeAlgorithm".tex}%
+%        \vspace{0.5\baselineskip}
+%
+%________________________________________________________________________
+%               END Usage
+%/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\

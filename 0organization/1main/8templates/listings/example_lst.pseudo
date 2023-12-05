@@ -1,10 +1,10 @@
 //Input:
 //- Some Explanation in Comment
 
-¢\color{js_function}some\_function¢(input_array[], anotherVar){
+¢\lstJSfuncdecl{some_function}¢(input_array[], anotherVar){
 	for each (curr in input_array){
-		output[] = ¢\color{js_function}push\_result¢(anotherVar);
-		char[] msg = ¢\color{js_function}build\_msg¢(someInput);
-		¢\color{js_function}send¢(curr, msg);
+		output[] = ¢\lstJSfunc{push_result}¢(anotherVar);
+		char[] msg = ¢\lstJSfunc{build_msg}¢(someInput);
+		send(curr, msg);
 	}
 }
