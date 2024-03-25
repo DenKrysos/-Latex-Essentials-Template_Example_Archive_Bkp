@@ -1,0 +1,109 @@
+%===================================================
+% Formatting the List of Acronyms in different ways
+%===================================================
+
+
+
+%======================================
+% Two quick ones. Rather simple. Appropriate for Papers / Articles
+%
+\usepackage[%
+	acronym=true,% acronyms
+% 	nomain,%
+	nonumberlist,%
+	nopostdot,%
+	seeautonumberlist,%
+	shortcuts,%
+	section=chapter,%
+	toc=false,%
+	nogroupskip=true,%
+    prefix,% makes -extra load -prefix
+]{glossaries-extra}% glossaries  glossaries-extra
+\setabbreviationstyle[acronym]{long-short}% To have true Gls-first output with -extra
+\makeglossaries%
+\loadglsentries{glossaries.tex}%
+%\glsdisablehyper% Disables Hyperlinks
+\renewcommand{\glossarysection}[2][]{}%Completely removes the section heading (re-defines the internally used command to just do nothing)
+%
+% ---------------------
+% As List. (No Indent between)
+\newlist{myglossarylist}{description}{10}%
+\setlist[myglossarylist]{%
+    align=left,%
+    partopsep=0ex,%
+    parsep=0ex,%
+    itemsep=0ex,%
+    leftmargin=0em,%
+    labelsep=0.7em,%
+    %itemindent=0em,%
+    %labelindent=1em,%
+    listparindent=\parindent,%
+}%
+\setlist[myglossarylist,2]{%
+    align=left,%
+    leftmargin=2em,%
+    itemindent=-2em,%
+}%
+\newglossarystyle{mylist}
+{% based on list style (adapt as required)
+    \setglossarystyle{list}%
+	\renewenvironment{theglossary}%
+		{\begin{myglossarylist}}{\end{myglossarylist}}%
+    \renewcommand{\glossentry}[2]{%
+        \item[\glsentryitem{##1}%
+            \glstarget{##1}{\glossentryname{##1}}]%
+        \glossentrydesc{##1}\glspostdescription%
+        \space\space##2%
+    }%
+}%
+%
+% ---------------------
+% As Table. (Separate Columns)
+\newglossarystyle{mytable}
+{% based on tabular style
+    \setglossarystyle{super}%
+	% \renewenvironment{theglossary}%
+	% 	{\begin{supertabular}{ll}}{\end{supertabular}}%
+    \renewcommand{\glossentry}[2]{%
+        \bfseries\glsentryitem{##1}%
+            \glstarget{##1}{\glossentryname{##1}}&%
+        \glossentrydesc{##1}\glspostdescription%
+        \space\space##2%
+        \\%
+    }%
+}%
+% For the Width of the Description Field (2nd Column)
+\setlength{\glsdescwidth}{0.8\hsize}% Default: 0.6\hsize
+
+
+
+% Printing it (via selecting one of the Styles above) (somewhere towards the end)
+\section*{List of Acronyms}
+\addcontentsline{lof}{section}{List of acronyms}
+\printglossary[type=\acronymtype,style=mytable]% style=list, index
+
+
+
+%======================================
+% More complex ones found in "0organization/1main/3settings/4customization/glossaries_style.tex"
+%   in either the Boilerplate Project or "Setup_Setting_STY"
+
+
+
+
+
+
+%===================================================
+% Formatting the Appearance of Acronyms in the Text
+%   (Is a little hacky, as it may interfer with some settings of glossaries(-extra) (like \setabbreviationstyle)
+%===================================================
+\usepackage{textcase,mfirstuc,xspace}%
+\defglsentryfmt[acronym]{%
+    \ifglsused{\glslabel}{%
+        \glsgenentryfmt%
+    }{%
+        \MakeLowercase{\glsentrydesc{\glslabel}}\xspace(\glsentrytext{\glslabel})%
+    }%
+}%
+
+
