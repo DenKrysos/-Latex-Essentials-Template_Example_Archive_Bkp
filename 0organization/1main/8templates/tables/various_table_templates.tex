@@ -1,8 +1,8 @@
 \begin{table}[!t]%[htbp] %laut IEEE guidelines müssen Tabellen und Bilder oben auf einer Seite erscheinen
-\small
-  \begin{center}
-  \caption{Requirements Mapped to Solutions}
-    \begin{tabular}{|l|c|c|c|c|}
+\small%
+  \begin{center}%
+  \caption{Requirements Mapped to Solutions}%
+    \begin{tabular}{|l|c|c|c|c|}%
 		\hline
         \rowcolor{Gray}
 		\begin{tabular}[t]{@{}lr@{}}
@@ -30,28 +30,28 @@
 		\end{center}
   \label{tab:req_mapping}%
 	\par%\medskip
-\makeatletter
+\makeatletter%
 	%\raggedleft
     \footnotesize%
 	\hspace{1.5em}\textbf{Legend:}\hspace{1em}
 	{\normalsize\legcrossstraight\ - }Solution does not meet requirement,\nl
 	\hspace{6.4em}{\normalsize\legbulletstraight\ - }Solution partly meets requirement,\nl
 	\hspace{6.0em}{\normalsize\legcheckstraight\ - }Solution meets requirement.
-\makeatother
+\makeatother%
 \end{table}%
 %
 %
 %
 %
 % Diagonally divided Box
-\begin{table}[!htpb]
-\small
-  \begin{center}
-  \caption{Connection Matrix for SotA and Solution Candidates}
-\begin{tabular}[]{l||c|c|c|c|}
+\begin{table}[!htpb]%
+\small%
+  \begin{center}%
+  \caption{Connection Matrix for SotA and Solution Candidates}%
+\begin{tabular}[]{l||c|c|c|c|}%
 %\diaghead{Candidate 4}{x}{y}
 \diagbox[width=6em,height=3.5ex]{x}{y}
-    &Core/NFs&UE&RAN&\gls{ba}\\\hline\hline
+    &Core/NFs&UE&RAN&BA\\\hline\hline
  5G&REST&REST&REST&REST\\\hline
  Candidate 1&REST&REST&REST&Pub/Sub\\\hline
  Candidate 2&Pub/Sub&REST&Pub/Sub&Pub/Sub\\\hline
@@ -60,48 +60,48 @@
 \end{center}
   \label{tab:}%
 	\par%\medskip
-\makeatletter
+\makeatletter%
 	%\raggedleft
     \footnotesize%
     Interaction method between core services / NFs and other infrastructure element.\nl%
     \textbf{x}: Solution Candidate (Section~\ref{sec:solCand}).
     \textbf{y}: Element to interact with.
-\makeatother
-\end{table}
+\makeatother%
+\end{table}%
 %
 %
 %
 %
 % Quite nicely formatted and visually appealing, I think
 {%
-\providecommand{\dispLhead}{}
-\providecommand{\dispThead}{}
-\renewcommand{\dispLhead}[1]{\bfseries#1}
-\renewcommand{\dispThead}[1]{\color{white}\bfseries#1}
-\newcommand{\disprat}[1]{
+\providecommand{\dispLhead}{}%
+\providecommand{\dispThead}{}%
+\renewcommand{\dispLhead}[1]{\bfseries#1}%
+\renewcommand{\dispThead}[1]{\color{white}\bfseries#1}%
+\newcommand{\disprat}[1]{%
     \ifnumcomp{\numexpr#1\relax}{<}{1}{\colorlet{ratingColUsed}{DenKrColor_Highlight_Gray}}{%
     \ifnumcomp{\numexpr#1\relax}{<}{2}{\colorlet{ratingColUsed}{DenKrColor_Highlight_Red}}{%
     \ifnumcomp{\numexpr#1\relax}{<}{4}{\colorlet{ratingColUsed}{DenKrColor_Highlight_Yellow!50!DenKrColor_Highlight_Orange}}{%
     \colorlet{ratingColUsed}{DenKrColor_Highlight_Green}}}}%
     \textcolor{ratingColUsed}{\Large\raisebox{-0.2ex}{\bfseries\boldmath$#1$}}%
-}
-\colorlet{domainColor}{SlateBlue!40!white}
-\colorlet{rowEven}{AliceBlue}
-\colorlet{rowOdd}{white}
+}%
+\colorlet{domainColor}{SlateBlue!40!white}%
+\colorlet{rowEven}{AliceBlue}%
+\colorlet{rowOdd}{white}%
 \hyphenpenalty=10000%
 \exhyphenpenalty=10000%
-\setlength{\tabcolsep}{4pt} % Default value: 6pt
+\setlength{\tabcolsep}{4pt}% Default value: 6pt
 \renewcommand{\arraystretch}{1.5}% Default value: 1
 \renewcommand\theadfont{\bfseries}%
 \begin{table}[!htpb]%
-\arrayrulewidth=0.8pt
-\arrayrulecolor{SkyBlue!90!black}
-\rowcolors{2}{rowOdd}{rowEven}
+\arrayrulewidth=0.8pt%
+\arrayrulecolor{SkyBlue!90!black}%
+\rowcolors{2}{rowOdd}{rowEven}%
 \setlength{\extrarowheight}{0ex}%
-\centering
-\footnotesize
-\caption{Degree of serving Feature Clusters}
-\begin{tabular}[]{c||c|c|}
+\centering%
+\footnotesize%
+\caption{Degree of serving Feature Clusters}%
+\begin{tabular}[]{c||c|c|}%
 % \hline
 % \cline{2-3}
 \hhline{|~|-|-|}
@@ -129,39 +129,40 @@
     \rowcolor{white}
     \multicolumn{3}{r}{\textbf{Legend:} Some Value explanation.}
 \\
-\end{tabular}
-\label{tab:featureClusterCompare}
-\end{table}
-\let\disprat\undefined
-\let\dispLhead\undefined
-\let\dispThead\undefined
-}
+\end{tabular}%
+\label{tab:featureClusterCompare}%
+\end{table}%
+\let\disprat\undefined%
+\let\dispLhead\undefined%
+\let\dispThead\undefined%
+}%
 %
 %
 %
 % Another one appaling, slightly variated, regarding the separating lines
 {%
-\providecommand{\dispLhead}{}
-\providecommand{\dispThead}{}
-\renewcommand{\dispLhead}[1]{\bfseries#1}
-\renewcommand{\dispThead}[1]{\color{white}\bfseries#1}
-\colorlet{domainColor}{SlateBlue!40!white}
-\colorlet{rowEven}{AliceBlue}
-\colorlet{rowOdd}{white}
+\providecommand{\dispLhead}{}%
+\providecommand{\dispThead}{}%
+\renewcommand{\dispLhead}[1]{\bfseries#1}%
+\renewcommand{\dispThead}[1]{\color{white}\bfseries#1}%
+\colorlet{domainColor}{SlateBlue!40!white}%
+\colorlet{rowEven}{AliceBlue}%
+\colorlet{rowOdd}{white}%
 \hyphenpenalty=10000%
 \exhyphenpenalty=10000%
-\setlength{\tabcolsep}{4pt} % Default value: 6pt
+\setlength{\tabcolsep}{4pt}% Default value: 6pt
 \renewcommand{\arraystretch}{1.5}% Default value: 1
 \renewcommand\theadfont{\bfseries}%
 \begin{table}[!htpb]%
-\arrayrulewidth=0.8pt
-\arrayrulecolor{SkyBlue!90!black}
-\rowcolors{2}{rowOdd}{rowEven}
+\arrayrulewidth=0.8pt%
+\arrayrulecolor{SkyBlue!90!black}%
+\rowcolors{2}{rowOdd}{rowEven}%
 \setlength{\extrarowheight}{0ex}%
-\centering
-\footnotesize
-\caption{Derived Reference Profiles for \glsfmtshortpl{kpi}}
-\begin{tabular}[]{c||c|c|c|c|c|c|}
+\centering%
+\footnotesize%
+\def\hlineIntra{\hhline{-||-|-|-|-|-|-|}\hhline{~}}%
+\caption{Derived Reference Profiles for \glsfmtshortpl{kpi}}%
+\begin{tabular}[]{c||c|c|c|c|c|c|}%
 \hhline{~|-|-|-|-|-|-|}\hhline{~}
 \rowcolor{SteelBlue!90!black}
     \multicolumn{1}{c|}{\cellcolor{white}}
@@ -182,32 +183,188 @@
 \noalign{\vskip\doublerulesep
     %\vskip-\arrayrulewidth
 }
-\hhline{-||-|-|-|-|-|-|}\hhline{~}
+%\hhline{-||-|-|-|-|-|-|}\hhline{~}
+\hlineIntra
     \dispLhead{Rapid Communication}&
     &&\qty{0.5}{\milli\second}&\qty{50}{\byte}&&
 \\
-\hhline{-||-|-|-|-|-|-|}\hhline{~}
+%\hhline{-||-|-|-|-|-|-|}\hhline{~}
+\hlineIntra
     \dispLhead{Cyclic Communication}&
     \qty{50}{\milli\second}&\qty{5}{\milli\second}&\qty{25}{\milli\second}&\qty{100}{\byte}&&
 \\
-\hhline{-||-|-|-|-|-|-|}\hhline{~}
+%\hhline{-||-|-|-|-|-|-|}\hhline{~}
+\hlineIntra
     \dispLhead{Agile Application}&
     \qty{20}{\milli\second}&&\qty{5}{\milli\second}&\qty{250}{\byte}&&
 \\
-\hhline{-||-|-|-|-|-|-|}\hhline{~}
+%\hhline{-||-|-|-|-|-|-|}\hhline{~}
+\hlineIntra
     \dispLhead{Scaling}&
     \qty{10}{\milli\second}&\qty{1}{\milli\second}&&\qty{100}{\byte}&\num{1000}&
 \\
-\hhline{-||-|-|-|-|-|-|}\hhline{~}
+%\hhline{-||-|-|-|-|-|-|}\hhline{~}
+\hlineIntra
     \dispLhead{Reconfiguration}&
     &&&&&\qty{200}{\milli\second}
 \\
-\hhline{-||-|-|-|-|-|-|}
-\noalign{\vskip\doublerulesep}
+%\hhline{-||-|-|-|-|-|-|}%
+\hlineIntra
+\noalign{\vskip\doublerulesep}%
+\hline%
+\end{tabular}%
+\label{tab:KPI_profile}%
+\end{table}%
+\let\dispLhead\undefined%
+\let\dispThead\undefined%
+}%
+%
+%
+%
+%
+%
+%
+% Two Variants, e.g. suiting for typesetting a Workpackage structure in Project-Descriptions
+{%
+\providecommand{\setTableTextWidth}{}\renewcommand{\setTableTextWidth}[2]{%
+% #1 Length to create and set to
+% #2 Number involved Cells/Colums in Row
+	\let#1\relax\newlength{#1}%
+	\setlength{#1}{\textwidth-#2\tabcolsep-#2\tabcolsep-#2\arrayrulewidth-\arrayrulewidth}%
+}%
+\providecommand{\dispLhead}{}%
+\providecommand{\dispThead}{}%
+\providecommand{\dispNfo}{}%
+\renewcommand{\dispLhead}[1]{\bfseries#1}%
+\renewcommand{\dispThead}[1]{\color{white}\bfseries#1}%
+\renewcommand{\dispNfo}[1]{\bfseries#1}%
+\colorlet{cell_Head}{SteelBlue!90!black}%
+\colorlet{cell_intraHead}{SlateBlue!40!white}%
+\colorlet{cell_rowEven}{AliceBlue}%
+\colorlet{cell_rowOdd}{white}%
+\hyphenpenalty=10000%
+\exhyphenpenalty=10000%
+\setlength{\tabcolsep}{4pt}% Default value: 6pt
+\renewcommand{\arraystretch}{1.5}% Default value: 1
+\renewcommand\theadfont{\bfseries}%
+%\begin{table}[!htpb]%
+\arrayrulewidth=0.8pt%
+\arrayrulecolor{SkyBlue!90!black}%
+\rowcolors{2}{cell_rowOdd}{cell_rowEven}%
+\setlength{\extrarowheight}{0ex}%
+\centering%
+\footnotesize%
+%\def\hlineIntra{\hhline{-||-|-|-|-|-|-|}\hhline{~}}%
+%\caption{Derived Reference Profiles for \glsfmtshortpl{kpi}}%
+\edef\columnNumber{6}%
+\setTableTextWidth{\tabletextw}{\columnNumber}%
+\setTableTextWidth{\tabletextwOne}{1}%
+\setTableTextWidth{\tabletextwThree}{3}%
+\begin{longtable}{|p{0.08\tabletextw}|p{0.17\tabletextw}|p{0.15\tabletextw}|p{0.2\tabletextw}|p{0.2\tabletextw}|p{0.2\tabletextw}|}%
 \hline
-\end{tabular}
-\label{tab:KPI_profile}
-\end{table}
-\let\dispLhead\undefined
-\let\dispThead\undefined
-}
+%
+%
+\rowcolor{cell_Head}
+	\multicolumn{\columnNumber}{l}{\dispThead{AP 1: Konzept, Entwicklung \& Implementierung}}\\
+\hline
+\rowcolor{cell_rowEven}
+	\multicolumn{2}{|p{0.3\tabletextwThree}|}{\dispNfo{AP-Leitung: DFKI}}&
+	\multicolumn{2}{p{0.4\tabletextwThree}|}{\dispNfo{Ressourcen: 20 PM}}&
+	\multicolumn{2}{p{0.3\tabletextwThree}|}{\dispNfo{Zeitraum: M01 -- M06}}\\
+\hline
+\rowcolor{cell_rowOdd}
+	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Ausgiebiger Beschreibungstext für das ganze AP.}\\
+\hline
+\rowcolor{cell_rowEven}
+	AP 1.1&
+	\multicolumn{5}{l|}{Konzept und Software-Design}\\
+\hline
+\rowcolor{cell_rowEven}
+	AP 1.2&
+	\multicolumn{5}{l|}{Implementierung}\\
+%
+%
+\hline%
+\noalign{\vskip\doublerulesep}%
+\hline%
+\end{longtable}%
+%\label{tab:tabLabel}%
+%\end{table}%
+\let\dispLhead\undefined%
+\let\dispThead\undefined%
+}%
+%
+%
+{%
+\providecommand{\setTableTextWidth}{}\renewcommand{\setTableTextWidth}[2]{%
+% #1 Length to create and set to
+% #2 Number involved Cells/Colums in Row
+	\let#1\relax\newlength{#1}%
+	\setlength{#1}{\textwidth-#2\tabcolsep-#2\tabcolsep-#2\arrayrulewidth-\arrayrulewidth}%
+}%
+\providecommand{\dispLhead}{}%
+\providecommand{\dispThead}{}%
+\providecommand{\dispNfo}{}%
+\renewcommand{\dispLhead}[1]{\bfseries#1}%
+\renewcommand{\dispThead}[1]{\color{white}\bfseries#1}%
+\renewcommand{\dispNfo}[1]{\bfseries#1}%
+\colorlet{cell_Head}{SteelBlue!90!black}%
+\colorlet{cell_intraHead}{SlateBlue!40!white}%
+\colorlet{cell_rowEven}{AliceBlue}%
+\colorlet{cell_rowOdd}{white}%
+\hyphenpenalty=10000%
+\exhyphenpenalty=10000%
+\setlength{\tabcolsep}{4pt}% Default value: 6pt
+\renewcommand{\arraystretch}{1.5}% Default value: 1
+\renewcommand\theadfont{\bfseries}%
+%\begin{table}[!htpb]%
+\arrayrulewidth=0.8pt%
+\arrayrulecolor{SkyBlue!90!black}%
+\rowcolors{2}{cell_rowOdd}{cell_rowEven}%
+\setlength{\extrarowheight}{0ex}%
+\centering%
+\footnotesize%
+%\def\hlineIntra{\hhline{-||-|-|-|-|-|-|}\hhline{~}}%
+%\caption{Derived Reference Profiles for \glsfmtshortpl{kpi}}%
+\edef\columnNumber{6}%
+\setTableTextWidth{\tabletextw}{\columnNumber}%
+\setTableTextWidth{\tabletextwOne}{1}%
+\setTableTextWidth{\tabletextwTwo}{2}%
+\setTableTextWidth{\tabletextwThree}{3}%
+\begin{longtable}{|p{0.08\tabletextw}|p{0.17\tabletextw}|p{0.3\tabletextw}|p{0.3\tabletextw}|p{0.2\tabletextw}|p{0.1\tabletextw}|}%
+\hline
+%
+%
+\rowcolor{cell_Head}
+	\multicolumn{\columnNumber}{l}{\dispThead{AP 1: Konzept, Entwicklung \& Implementierung}}\\
+\hline
+	\multicolumn{3}{|p{0.5\tabletextwTwo}|}{\dispNfo{AP-Leitung: DFKI}}&
+	\multicolumn{3}{p{0.5\tabletextwTwo}|}{\dispNfo{Bearbeitungszeitraum: M01 -- M06}}\\
+\hline
+	\multicolumn{3}{|p{0.5\tabletextwTwo}|}{\dispNfo{Partner: alle}}&
+	\multicolumn{3}{p{0.5\tabletextwTwo}|}{\dispNfo{Ressourcen: 20 PM}}\\
+\hline
+\rowcolor{cell_intraHead}
+	\multicolumn{2}{|p{0.1\tabletextwThree}|}{\dispNfo{Task 1.a}}&
+	\multicolumn{2}{p{0.75\tabletextwThree}|}{Konzept und Software-Design}&
+	\multicolumn{2}{p{0.15\tabletextwThree}|}{\dispNfo{M01 -- M04}}\\
+\hline
+	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Ausgiebiger Beschreibungstext für ein einzelnes (Sub-)Task eines AP.}\\
+\hline
+\rowcolor{cell_intraHead}
+	\multicolumn{2}{|p{0.1\tabletextwThree}|}{\dispNfo{Task 1.b}}&
+	\multicolumn{2}{p{0.75\tabletextwThree}|}{Implementierung}&
+	\multicolumn{2}{p{0.15\tabletextwThree}|}{\dispNfo{M03 -- M06}}\\
+\hline
+	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Ausgiebiger Beschreibungstext für ein einzelnes (Sub-)Task eines AP.}\\
+%
+%
+\hline%
+\noalign{\vskip\doublerulesep}%
+\hline%
+\end{longtable}%
+%\label{tab:tabLabel}%
+%\end{table}%
+\let\dispLhead\undefined%
+\let\dispThead\undefined%
+}%

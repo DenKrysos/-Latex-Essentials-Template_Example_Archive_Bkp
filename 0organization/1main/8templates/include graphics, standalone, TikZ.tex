@@ -1,0 +1,58 @@
+%-------------------------------
+%--- OPTIONAL ------------------
+% The Macro '\setInclGraphWidthDINA' is provided by the "macros_typografie.tex" File
+% It sets the value '\InclGraphWidthDINA' to be optimized between DIN-A4 & A5.
+%	Mostly relevant, when you intend to compile a Document for both DIN-A4 & A5.
+%-------------------------------
+
+
+% Include a Standalone TikZ Graphic
+% - - - - - - - - - - - -
+%\setInclGraphWidthDINA{0.7}
+\begin{figure}[!ht]
+	\centering
+	\includestandalone[mode=\includestandalonedefaultmode,width=\InclGraphWidthDINA]{./path/to/StandaloneTikzPic}
+	\caption{With this, you specify the File without the '.tex' File-Extension}
+	\label{fig:label}
+\end{figure}
+
+
+
+
+% Standard Graphic Inclusion
+% - - - - - - - - - - - -
+%\setInclGraphWidth{0.6}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\InclGraphWidth]{{"./path/to/pic"}.png}
+	\caption{Caption}%
+	\label{fig:label}
+\end{figure}
+
+
+
+
+% Some Float-Figure with two Graphics
+% - - - - - - - - - - - -
+\begin{figure*}[!htpb]%
+	\centering%
+	\hspace*{\fill}%
+	%\setInclGraphWidthDINA{0.35}%
+	\begin{minipage}[b]{\InclGraphWidthDINA}%
+		\centering%
+		\includegraphics[width=\textwidth]{{"./path/to/Pic1"}.pdf}%
+		\subcaption{Subfig1}%
+		\label{subfig:subfigLabel1}%
+	\end{minipage}%
+	\hspace*{\fill}%
+	%\setInclGraphWidthDINA{0.42}%
+	\begin{minipage}[b]{\InclGraphWidthDINA}%
+		\centering%
+		\includegraphics[width=\textwidth]{{"./path/to/Pic2"}.pdf}%
+		\subcaption{Subfig2}%
+		\label{subfig:subfigLabel2}%
+	\end{minipage}%
+	\hspace*{\fill}%
+	\caption{Figure Caption}%
+	\label{fig:figLabel}%
+\end{figure*}%
