@@ -85,9 +85,12 @@
     \colorlet{ratingColUsed}{DenKrColor_Highlight_Green}}}}%
     \textcolor{ratingColUsed}{\Large\raisebox{-0.2ex}{\bfseries\boldmath$#1$}}%
 }%
-\colorlet{domainColor}{SlateBlue!40!white}%
-\colorlet{rowEven}{AliceBlue}%
-\colorlet{rowOdd}{white}%
+\colorlet{cell_Head}{SteelBlue!90!black}%
+\colorlet{cell_intraHead}{SlateBlue!40!white}%
+\colorlet{cell_bright}{white}%
+\colorlet{cell_accentuated}{AliceBlue}%
+\colorlet{cell_rowOdd}{cell_bright}%
+\colorlet{cell_rowEven}{cell_accentuated}%
 \hyphenpenalty=10000%
 \exhyphenpenalty=10000%
 \setlength{\tabcolsep}{4pt}% Default value: 6pt
@@ -105,7 +108,7 @@
 % \hline
 % \cline{2-3}
 \hhline{|~|-|-|}
-\rowcolor{SteelBlue!90!black}
+\rowcolor{cell_Head}
     \multicolumn{1}{c|}{\cellcolor{white}}
     &
     \dispThead{Property-1}
@@ -145,9 +148,12 @@
 \providecommand{\dispThead}{}%
 \renewcommand{\dispLhead}[1]{\bfseries#1}%
 \renewcommand{\dispThead}[1]{\color{white}\bfseries#1}%
-\colorlet{domainColor}{SlateBlue!40!white}%
-\colorlet{rowEven}{AliceBlue}%
-\colorlet{rowOdd}{white}%
+\colorlet{cell_Head}{SteelBlue!90!black}%
+\colorlet{cell_intraHead}{SlateBlue!40!white}%
+\colorlet{cell_bright}{white}%
+\colorlet{cell_accentuated}{AliceBlue}%
+\colorlet{cell_rowOdd}{cell_bright}%
+\colorlet{cell_rowEven}{cell_accentuated}%
 \hyphenpenalty=10000%
 \exhyphenpenalty=10000%
 \setlength{\tabcolsep}{4pt}% Default value: 6pt
@@ -164,7 +170,7 @@
 \caption{Derived Reference Profiles for \glsfmtshortpl{kpi}}%
 \begin{tabular}[]{c||c|c|c|c|c|c|}%
 \hhline{~|-|-|-|-|-|-|}\hhline{~}
-\rowcolor{SteelBlue!90!black}
+\rowcolor{cell_Head}
     \multicolumn{1}{c|}{\cellcolor{white}}
     &
     \dispThead{$L_t$}
@@ -224,7 +230,7 @@
 %
 %
 %
-% Two Variants, e.g. suiting for typesetting a Workpackage structure in Project-Descriptions
+% Variants, suiting for example typesetting a Workpackage structure in Project-Descriptions
 {%
 \providecommand{\setTableTextWidth}{}\renewcommand{\setTableTextWidth}[2]{%
 % #1 Length to create and set to
@@ -240,8 +246,10 @@
 \renewcommand{\dispNfo}[1]{\bfseries#1}%
 \colorlet{cell_Head}{SteelBlue!90!black}%
 \colorlet{cell_intraHead}{SlateBlue!40!white}%
-\colorlet{cell_rowEven}{AliceBlue}%
-\colorlet{cell_rowOdd}{white}%
+\colorlet{cell_bright}{white}%
+\colorlet{cell_accentuated}{AliceBlue}%
+\colorlet{cell_rowOdd}{cell_bright}%
+\colorlet{cell_rowEven}{cell_accentuated}%
 \hyphenpenalty=10000%
 \exhyphenpenalty=10000%
 \setlength{\tabcolsep}{4pt}% Default value: 6pt
@@ -262,28 +270,26 @@
 \setTableTextWidth{\tabletextwThree}{3}%
 \begin{longtable}{|p{0.08\tabletextw}|p{0.17\tabletextw}|p{0.15\tabletextw}|p{0.2\tabletextw}|p{0.2\tabletextw}|p{0.2\tabletextw}|}%
 \hline
-%
-%
+%- - - - - - - - - - - - - - - -
 \rowcolor{cell_Head}
 	\multicolumn{\columnNumber}{l}{\dispThead{AP 1: Konzept, Entwicklung \& Implementierung}}\\
 \hline
-\rowcolor{cell_rowEven}
+\rowcolor{cell_accentuated}
 	\multicolumn{2}{|p{0.3\tabletextwThree}|}{\dispNfo{AP-Leitung: DFKI}}&
 	\multicolumn{2}{p{0.4\tabletextwThree}|}{\dispNfo{Ressourcen: 20 PM}}&
 	\multicolumn{2}{p{0.3\tabletextwThree}|}{\dispNfo{Zeitraum: M01 -- M06}}\\
 \hline
-\rowcolor{cell_rowOdd}
+\rowcolor{cell_bright}
 	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Ausgiebiger Beschreibungstext für das ganze AP.}\\
 \hline
-\rowcolor{cell_rowEven}
+\rowcolor{cell_accentuated}
 	AP 1.1&
 	\multicolumn{5}{l|}{Konzept und Software-Design}\\
 \hline
-\rowcolor{cell_rowEven}
+\rowcolor{cell_accentuated}
 	AP 1.2&
 	\multicolumn{5}{l|}{Implementierung}\\
-%
-%
+%- - - - - - - - - - - - - - - -
 \hline%
 \noalign{\vskip\doublerulesep}%
 \hline%
@@ -310,8 +316,10 @@
 \renewcommand{\dispNfo}[1]{\bfseries#1}%
 \colorlet{cell_Head}{SteelBlue!90!black}%
 \colorlet{cell_intraHead}{SlateBlue!40!white}%
-\colorlet{cell_rowEven}{AliceBlue}%
-\colorlet{cell_rowOdd}{white}%
+\colorlet{cell_bright}{white}%
+\colorlet{cell_accentuated}{AliceBlue}%
+\colorlet{cell_rowOdd}{cell_bright}%
+\colorlet{cell_rowEven}{cell_accentuated}%
 \hyphenpenalty=10000%
 \exhyphenpenalty=10000%
 \setlength{\tabcolsep}{4pt}% Default value: 6pt
@@ -333,8 +341,7 @@
 \setTableTextWidth{\tabletextwThree}{3}%
 \begin{longtable}{|p{0.08\tabletextw}|p{0.17\tabletextw}|p{0.3\tabletextw}|p{0.3\tabletextw}|p{0.2\tabletextw}|p{0.1\tabletextw}|}%
 \hline
-%
-%
+%- - - - - - - - - - - - - - - -
 \rowcolor{cell_Head}
 	\multicolumn{\columnNumber}{l}{\dispThead{AP 1: Konzept, Entwicklung \& Implementierung}}\\
 \hline
@@ -357,8 +364,111 @@
 	\multicolumn{2}{p{0.15\tabletextwThree}|}{\dispNfo{M03 -- M06}}\\
 \hline
 	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Ausgiebiger Beschreibungstext für ein einzelnes (Sub-)Task eines AP.}\\
+%- - - - - - - - - - - - - - - -
+\hline%
+\noalign{\vskip\doublerulesep}%
+\hline%
+\end{longtable}%
+%\label{tab:tabLabel}%
+%\end{table}%
+\let\dispLhead\undefined%
+\let\dispThead\undefined%
+}%
 %
 %
+{%
+\providecommand{\setTableTextWidth}{}\renewcommand{\setTableTextWidth}[2]{%
+% #1 Length to create and set to
+% #2 Number involved Cells/Colums in Row
+	\let#1\relax\newlength{#1}%
+	\setlength{#1}{\textwidth-#2\tabcolsep-#2\tabcolsep-#2\arrayrulewidth-\arrayrulewidth}%
+}%
+\providecommand{\dispLhead}{}%
+\providecommand{\dispThead}{}%
+\providecommand{\dispNfo}{}%
+\renewcommand{\dispLhead}[1]{\bfseries#1}%
+\renewcommand{\dispThead}[1]{\color{white}\bfseries#1}%
+\renewcommand{\dispNfo}[1]{\bfseries#1}%
+\colorlet{cell_Head}{SteelBlue!90!black}%
+\colorlet{cell_intraHead}{SlateBlue!40!white}%
+\colorlet{cell_bright}{white}%
+\colorlet{cell_accentuated}{AliceBlue}%
+\colorlet{cell_rowOdd}{cell_bright}%
+\colorlet{cell_rowEven}{cell_accentuated}%
+\hyphenpenalty=10000%
+\exhyphenpenalty=10000%
+\setlength{\tabcolsep}{4pt}% Default value: 6pt
+\renewcommand{\arraystretch}{1.5}% Default value: 1
+\renewcommand\theadfont{\bfseries}%
+%\begin{table}[!htpb]%
+\arrayrulewidth=0.8pt%
+\arrayrulecolor{SkyBlue!90!black}%
+\rowcolors{2}{cell_rowOdd}{cell_rowEven}%
+\setlength{\extrarowheight}{0ex}%
+\centering%
+\footnotesize%
+%\def\hlineIntra{\hhline{-||-|-|-|-|-|-|}\hhline{~}}%
+%\caption{Derived Reference Profiles for \glsfmtshortpl{kpi}}%
+\edef\columnNumber{6}%
+\setTableTextWidth{\tabletextw}{\columnNumber}%
+\setTableTextWidth{\tabletextwOne}{1}%
+\setTableTextWidth{\tabletextwTwo}{2}%
+\setTableTextWidth{\tabletextwThree}{3}%
+\begin{longtable}{|p{0.08\tabletextw}|p{0.17\tabletextw}|p{0.25\tabletextw}|p{0.2\tabletextw}|p{0.2\tabletextw}|p{0.1\tabletextw}|}%
+\hline
+%- - - - - - - - - - - - - - - -
+\rowcolor{cell_Head}
+	\multicolumn{\columnNumber}{l}{\dispThead{AP 1: Management, Organisation \& Liasons}}\\
+\hline
+\rowcolor{cell_accentuated}
+	\multicolumn{3}{|p{0.5\tabletextwTwo}|}{\dispNfo{Ressourcen: 20 PM}}&
+	\multicolumn{3}{p{0.5\tabletextwTwo}|}{\dispNfo{Zeitraum: M01 -- M06}}\\
+\hline
+\rowcolor{cell_bright}
+	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Beschreibungstext für das Gesamt-AP.}\\
+\hline
+\rowcolor{cell_intraHead}
+	\multicolumn{2}{|p{0.1\tabletextwThree}|}{\dispNfo{Task 1.a}}&
+	\multicolumn{2}{p{0.75\tabletextwThree}|}{Konzept und Software-Design}&
+	\multicolumn{2}{p{0.15\tabletextwThree}|}{\dispNfo{M01 -- M04}}\\
+\hline
+	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Ausgiebiger Beschreibungstext für ein einzelnes (Sub-)Task eines AP.}\\
+%- - - - - - - - - - - - - - - -
+\hline%
+\noalign{\vskip\doublerulesep}%
+\hline%
+\end{longtable}%
+%===========================================
+%===========================================
+\begin{longtable}{|p{0.08\tabletextw}|p{0.17\tabletextw}|p{0.25\tabletextw}|p{0.2\tabletextw}|p{0.2\tabletextw}|p{0.1\tabletextw}|}%
+\hline
+%- - - - - - - - - - - - - - - -
+\rowcolor{cell_Head}
+	\multicolumn{\columnNumber}{l}{\dispThead{AP 2: Konzept, Entwicklung \& Implementierung}}\\
+\hline
+\rowcolor{cell_accentuated}
+	\multicolumn{3}{|p{0.5\tabletextwTwo}|}{\dispNfo{Ressourcen: 20 PM}}&
+	\multicolumn{3}{p{0.5\tabletextwTwo}|}{\dispNfo{Zeitraum: M01 -- M06}}\\
+\hline
+\rowcolor{cell_bright}
+	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Beschreibungstext für das Gesamt-AP.}\\
+\hline
+\rowcolor{cell_intraHead}
+	\multicolumn{2}{|p{0.1\tabletextwThree}|}{\dispNfo{Task 2.a}}&
+	\multicolumn{2}{p{0.75\tabletextwThree}|}{Konzept und Software-Design}&
+	\multicolumn{2}{p{0.15\tabletextwThree}|}{\dispNfo{M01 -- M04}}\\
+\hline
+\rowcolor{cell_bright}
+	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Ausgiebiger Beschreibungstext für ein einzelnes (Sub-)Task eines AP.}\\
+\hline
+\rowcolor{cell_intraHead}
+	\multicolumn{2}{|p{0.1\tabletextwThree}|}{\dispNfo{Task 2.b}}&
+	\multicolumn{2}{p{0.75\tabletextwThree}|}{Implementierung}&
+	\multicolumn{2}{p{0.15\tabletextwThree}|}{\dispNfo{M03 -- M06}}\\
+\hline
+\rowcolor{cell_bright}
+	\multicolumn{\columnNumber}{|p{\tabletextwOne}|}{Ausgiebiger Beschreibungstext für ein einzelnes (Sub-)Task eines AP.}\\
+%- - - - - - - - - - - - - - - -
 \hline%
 \noalign{\vskip\doublerulesep}%
 \hline%
